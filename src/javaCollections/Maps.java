@@ -34,6 +34,8 @@ public class Maps {
         map.put(6, "Seat");
         map.put(0, "Skoda");
 
+        System.out.println(map); // Prints all keys with values
+
         for (Integer key : map.keySet()) {
             String value = map.get(key);
             System.out.println(key + " : " + value);

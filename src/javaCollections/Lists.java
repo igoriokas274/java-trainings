@@ -12,32 +12,30 @@ public class Lists {
         ArrayList<Integer> arrayList = new ArrayList<>();
         LinkedList<Integer> linkedList = new LinkedList<>();
 
-        arrayList.add(2);
-        arrayList.add(5);
-        arrayList.add(33);
-        arrayList.add(9);
-        arrayList.add(2);
-
-        for (Integer integer : arrayList) {
-            System.out.println("Item " + integer);
-        }
-
+        System.out.println("ArrayList:");
+        addAndPrintList(arrayList);
         System.out.println();
-
-        linkedList.add(2);
-        linkedList.add(5);
-        linkedList.add(33);
-        linkedList.add(9);
-        linkedList.add(2);
-
-        for (Integer integer : linkedList) {
-            System.out.println("Item " + integer);
-        }
+        System.out.println("LinkedList:");
+        addAndPrintList(linkedList);
 
         System.out.println();
 
         System.out.println("Time spent for adding values in ArrayList " + doTimeCalculation(arrayList) + " ms");
         System.out.println("Time spent for adding values in LinkedList " + doTimeCalculation(linkedList) + " ms");
+    }
+
+    public static void addAndPrintList(List<Integer> list) {
+
+        list.add(2);
+        list.add(5);
+        list.add(33);
+        list.add(9);
+        list.add(2);
+
+        for (Integer integer : list) {
+            System.out.println("Item " + integer);
+        }
+
     }
 
     public static long doTimeCalculation(List<Integer> values) {
