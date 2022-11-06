@@ -14,38 +14,46 @@ public class Sets {
         LinkedHashSet<String> linkedHashSet = new LinkedHashSet<>(); // AS ADDED IN SET
         TreeSet<String> treeSet = new TreeSet<>(); // SORTED SET (ALPHABETICALLY IN THIS CASE)
 
-        createAndPrintSet(hashSet);
-        createAndPrintSet(linkedHashSet);
-        createAndPrintSet(treeSet);
+        addElements(hashSet);
+        addElements(linkedHashSet);
+        addElements(treeSet);
+
+        showElements(hashSet);
+        System.out.println();
+        showElements(linkedHashSet);
+        System.out.println();
+        showElements(treeSet);
 
     }
 
-    public static void createAndPrintSet(Set<String> stringSet) {
+    public static void addElements(Set<String> strings) {
 
-        stringSet.add("Toyota");
-        stringSet.add("Ford");
-        stringSet.add("Renault");
-        stringSet.add("Jeep");
-        stringSet.add("VW");
-        stringSet.add("Audi");
+        strings.add("Toyota");
+        strings.add("Ford");
+        strings.add("Renault");
+        strings.add("Jeep");
+        strings.add("VW");
+        strings.add("Audi");
 
-        // Duplicated value in Set
-        stringSet.add("Renault");
+        // Adding duplicated value in Set
+        strings.add("Renault");
 
         // PRINT ALL SET IN THE ROW
-        System.out.println(stringSet);
+        System.out.println(strings);
 
-        // ITERATION
-        for(String string: stringSet) {
+    }
+
+    public static void showElements(Set<String> strings) {
+
+        for(String string: strings) {
             System.out.println(string);
         }
 
         // DOES SET CONTAINS A GIVEN ITEM
-        if (stringSet.contains("Opel")) {
+        if (strings.contains("Opel")) {
             System.out.println("Contains 'Opel'");
         } else {
             System.out.println("Set does not contains 'Opel'");
         }
-
     }
 }
